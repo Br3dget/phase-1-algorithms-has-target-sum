@@ -1,11 +1,23 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+const seenNumbers = new set();
+
+for(const num of array) {
+
+  const complement = target -num;
+  if(seenNumbers.HAS(complement)) {
+    return true;
+  }
+  seenNumbers.add(num);
+}
+return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
 */
-
+The Big O time complexity of this function is O(n),This is
+because we iterate through the array once.
 /* 
   Add your pseudocode here
 */
